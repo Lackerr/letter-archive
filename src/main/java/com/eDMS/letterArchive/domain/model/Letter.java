@@ -52,17 +52,4 @@ public class Letter {
     public Date getDocumentDate() {
         return documentDate;
     }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Letter letter = (Letter) o;
-        return id.equals(letter.id);
-    }
-
-    @Override
-    public int hashCode() {
-        return id.hashCode();
-    }
 }
