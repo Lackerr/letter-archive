@@ -3,16 +3,13 @@
 import jakarta.persistence.Embeddable;
 import org.springframework.util.Assert;
 
-import java.util.UUID;
-
 @Embeddable
-public record LetterId(UUID id){
-
-    public LetterId{
+public record TagId(int id) {
+    public TagId {
         Assert.notNull(id, "id must not be null");
     }
 
-    public LetterId(){
-        this(UUID.randomUUID());
+    public TagId() {
+        this(0);
     }
 }
